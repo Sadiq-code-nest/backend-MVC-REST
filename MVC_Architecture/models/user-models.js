@@ -1,5 +1,3 @@
-
-
 const users = [{
     name: "Sadiqul Islam",
     age: 25
