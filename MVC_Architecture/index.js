@@ -5,7 +5,6 @@ const port = 3000;
 const userRouter = require('./routes/user-route');
 // Student-data
 const studentData = require('./routes/student-route');
-
 app.use(express.urlencoded({ extended: true }));
 app.use(userRouter);
 app.use(studentData);
