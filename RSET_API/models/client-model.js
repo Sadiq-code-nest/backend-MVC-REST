@@ -1,5 +1,5 @@
 const { v4: uuidv4 } = require('uuid');
-const clients = [{
+let clients = [{
     id: uuidv4(),
     username: 'sadiq',
     email: 'sadiq1221@gmail.com'
