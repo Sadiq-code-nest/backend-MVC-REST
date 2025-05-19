@@ -4,4 +4,4 @@ const { clientRoute, addClient } = require('../controller/client-controller');
 // Client route 
 router.get('/', clientRoute);
 router.post('/', addClient);
-module.exports = router;
+module.exports = router; 
