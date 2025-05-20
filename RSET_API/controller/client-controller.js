@@ -12,4 +12,14 @@ const addClient = (req, res) => {
     clients.push(newClient_data);
     res.status(200).json(clients)
 }
-module.exports = { clientRoute, addClient };
+
+
+// Update clients
+const updateClient = (req, res) => {
+    const id = req.params.id;
+    res.status(202).json({ msg: id })
+}
+
+
+
+module.exports = { clientRoute, addClient, updateClient };
