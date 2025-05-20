@@ -9,7 +9,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 //Route
 app.use('/client', routeClient);
-
 // Home route
 app.get('/', (req, res) => res.sendFile(__dirname + '/./views/index.html'));
 //Route error
