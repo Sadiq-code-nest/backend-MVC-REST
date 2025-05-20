@@ -1,4 +1,4 @@
-const clients = require('../models/client-model')
+let clients = require('../models/client-model')
 const { v4: uuidv4 } = require('uuid');
 
 //get client
@@ -13,7 +13,7 @@ const addClient = (req, res) => {
     }
     clients.push(newClient_data);
     res.status(200).json(clients)
-}
+};
 
 // Update clients
 const updateClient = (req, res) => {
@@ -26,6 +26,14 @@ const updateClient = (req, res) => {
             selectedUser.email = email
         });
     res.status(202).json(clients);
+};
+
+//delete User
+let deleteClient = (req, res) => {
+    let userID = req.params.id;
+    let data_afterDelete = clients.filter(user => user.id !== userID);
+    clients = data_afterDelete;
+    res.status(202).json(clients);
 }
 
-module.exports = { clientRoute, addClient, updateClient };
+module.exports = { clientRoute, addClient, updateClient, deleteClient };
